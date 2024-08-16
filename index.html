@@ -9,12 +9,102 @@
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
-<body>
-    <main
-        class="w-full min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-        <h1 class="font-mono font-bold text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            Vite + Typescript + TailwindCSS + GitHub Pages
-        </h1>
+<body class="bg-c_Very_Light_Grayish_Blue relative">
+    <img src="/images/bg-top.svg" alt="bg-top"
+        class="absolute md:top-0 md:right-0 -top-[3rem] -right-[12rem] aspect-[375/658] w-[100vw] md:w-auto">
+    <img src="/images/bg-bottom.svg" alt="bg-bottom" class="absolute bottom-0 left-0 aspect-[353/304] md:block hidden">
+    <main class="w-full min-h-screen flex flex-col items-center justify-center z-10 md:gap-[5.5rem] gap-20 pb-12 px-6">
+        <div class="flex flex-col w-full items-center z-10">
+            <h1 class="font-montserrat text-[2rem] font-bold text-c_Grayish_Blue py-9">Our Pricing</h1>
+            <div class="w-fit items-center justify-center flex gap-6">
+                <span class="font-montserrat text-c_Grayish_Blue font-medium">Annually</span>
+                <button
+                    id="switch"
+                    class="rounded-full outline-none aspect-[1.75/1] h-8 transition bg-gradient-to-r from-c_blue_1 to-c_blue_2 hover:opacity-50 relative p-1 flex items-center">
+                    <span class="sr-only">Switch plan</span>
+                    <div style="left: 0.25rem;" class="absolute aspect-square h-6 rounded-full bg-white">
+
+                    </div>
+                </button>
+                <span class="font-montserrat text-c_Grayish_Blue font-medium">Monthly</span>
+            </div>
+        </div>
+        <div
+            class="md:grid grid-cols-3 flex flex-col md:w-[67rem] w-full md:bg-white rounded-xl z-10 md:shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] md:gap-0 gap-8">
+            <section class="flex flex-col items-center p-7 rounded-xl md:bg-transparent bg-white">
+                <h2 class="font-montserrat text-c_Grayish_Blue font-bold text-lg">Basic</h2>
+                <p class="flex items-center gap-1 pt-2 pb-4">
+                    <span class="font-montserrat text-c_Dark_Grayish_Blue text-[2rem] font-bold">$</span>
+                    <span id="basic-price"
+                        class="font-montserrat text-c_Dark_Grayish_Blue text-[4rem] font-bold">199.99</span>
+                </p>
+                <div class="flex flex-col w-full pb-8">
+                    <p
+                        class="py-4 text-center font-montserrat text-c_Grayish_Blue font-bold text-sm border-t-[1px] border-c_Light_Grayish_Blue">
+                        500 GB Storage</p>
+                    <p
+                        class="py-4 text-center font-montserrat text-c_Grayish_Blue font-bold text-sm border-t-[1px] border-c_Light_Grayish_Blue">
+                        2 Users Allowed</p>
+                    <p
+                        class="py-4 text-center font-montserrat text-c_Grayish_Blue font-bold text-sm border-y-[1px] border-c_Light_Grayish_Blue">
+                        Send up to 3 GB</p>
+                </div>
+                <div class="transition bg-gradient-to-r from-c_blue_1 to-c_blue_2 w-full rounded-lg">
+                    <button
+                        class="font-montserrat w-full rounded-lg tracking-widest text-xs font-bold text-white py-3 text-center transition border-[1px] border-transparent hover:bg-white hover:text-c_blue_2 hover:border-c_blue_2">LEARN
+                        MORE</button>
+                </div>
+            </section>
+            <section class="flex flex-col items-center p-7 relative bg-transparent">
+                <div
+                    class="w-full absolute md:h-[calc(100%+3rem)] h-full top-0 md:-top-[1.5rem] -z-10 rounded-xl bg-gradient-to-b from-c_blue_1 to-c_blue_2">
+
+                </div>
+                <h2 class="font-montserrat text-white font-bold text-lg">Professional</h2>
+                <p class="flex items-center gap-1 pt-2 pb-4">
+                    <span class="font-montserrat text-white text-[2rem] font-bold">$</span>
+                    <span id="professional-price" class="font-montserrat text-white text-[4rem] font-bold">249.99</span>
+                </p>
+                <div class="flex flex-col w-full pb-8">
+                    <p
+                        class="py-4 text-center font-montserrat text-white font-bold text-sm border-t-[1px] border-c_Light_Grayish_Blue">
+                        500 GB Storage</p>
+                    <p
+                        class="py-4 text-center font-montserrat text-white font-bold text-sm border-t-[1px] border-c_Light_Grayish_Blue">
+                        2 Users Allowed</p>
+                    <p
+                        class="py-4 text-center font-montserrat text-white font-bold text-sm border-y-[1px] border-c_Light_Grayish_Blue">
+                        Send up to 3 GB</p>
+                </div>
+                <button
+                    class="font-montserrat w-full rounded-lg tracking-wider text-xs font-bold text-c_blue_2 py-3 text-center bg-white transition border-[1px] border-transparent hover:text-white hover:border-white hover:bg-transparent">LEARN
+                    MORE</button>
+            </section>
+            <section class="flex flex-col items-center p-7 rounded-xl md:bg-transparent bg-white">
+                <h2 class="font-montserrat text-c_Grayish_Blue font-bold text-lg">Master</h2>
+                <p class="flex items-center gap-1 pt-2 pb-4">
+                    <span class="font-montserrat text-c_Dark_Grayish_Blue text-[2rem] font-bold">$</span>
+                    <span id="master-price"
+                        class="font-montserrat text-c_Dark_Grayish_Blue text-[4rem] font-bold">399.99</span>
+                </p>
+                <div class="flex flex-col w-full pb-8">
+                    <p
+                        class="py-4 text-center font-montserrat text-c_Grayish_Blue font-bold text-sm border-t-[1px] border-c_Light_Grayish_Blue">
+                        500 GB Storage</p>
+                    <p
+                        class="py-4 text-center font-montserrat text-c_Grayish_Blue font-bold text-sm border-t-[1px] border-c_Light_Grayish_Blue">
+                        2 Users Allowed</p>
+                    <p
+                        class="py-4 text-center font-montserrat text-c_Grayish_Blue font-bold text-sm border-y-[1px] border-c_Light_Grayish_Blue">
+                        Send up to 3 GB</p>
+                </div>
+                <div class="transition bg-gradient-to-r from-c_blue_1 to-c_blue_2 w-full rounded-lg">
+                    <button
+                        class="font-montserrat w-full rounded-lg tracking-widest text-xs font-bold text-white py-3 text-center transition border-[1px] border-transparent hover:bg-white hover:text-c_blue_2 hover:border-c_blue_2">LEARN
+                        MORE</button>
+                </div>
+            </section>
+        </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
 </body>
