@@ -5,7 +5,6 @@ const switchBtn = document.getElementById("switch") as HTMLButtonElement;
 let isAnnually = true;
 
 switchBtn?.addEventListener("click", () => {
-    console.log("is triggered");
     if (isAnnually) {
         switchBtn.disabled = true;
         changeToMonthlyPrice()
